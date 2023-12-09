@@ -53,7 +53,7 @@ if(danielFireTimer<=0&&danielFireTimerPrev>0)
 	obj_menu.daniel_right_click_release(id)
 }
 
-image_speed=horizontalSpeed!=0
+image_speed=horizontalSpeed!=0||verticalSpeed!=0
 image_index*=horizontalSpeed!=0||verticalSpeed!=0
 
 var col=instance_place(x+horizontalSpeed,y,wall)
