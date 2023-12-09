@@ -42,9 +42,19 @@ else
 	verticalSpeed=moveToward(verticalSpeed,0,DEACCELLTIME)
 }
 
-if(leftAttackKey&&stats.cooldown[0]<=0)
+if(usingAltAttack)
 {
-	obj_menu.character[obj_menu.characterSelected].leftClick(id)
+	if(leftAttackKey&&stats.cooldown[3]<=0)
+	{
+		obj_menu.character[obj_menu.characterSelected].altLeftClick(id)
+	}
+}
+else
+{
+	if(leftAttackKey&&stats.cooldown[0]<=0)
+	{
+		obj_menu.character[obj_menu.characterSelected].leftClick(id)
+	}
 }
 if(rightAttackKey&&stats.cooldown[1]<=0)
 {

@@ -99,6 +99,18 @@ function daniel_left_click_attack(object){
 	object.hitEnemy=false
 	
 }
+function daniel_alt_left_click_attack(object){
+	stats.cooldown[3]=15
+	stats.immunityFrames=14
+	var moveDirection=point_direction(object.x,object.y,mouse_x,mouse_y)
+	object.horizontalSpeed+=lengthdir_x(7,moveDirection)
+	object.verticalSpeed+=lengthdir_y(7,moveDirection)
+	object.swingTime=5
+	object.maxSwingTime=5
+	object.swingDamage=1
+	object.hitEnemy=false
+	
+}
 function daniel_right_click_attack(object){
 	if(object.rightAttackKeyPressed)
 	{
@@ -128,7 +140,7 @@ function daniel_space_attack(object){
 
 characterSelected=0
 
-character[0]=create_character("Daniel",spr_daniel,spr_daniel_schythe,3,6,"hes daniel WHAT THE FUCK TO YOU EXPECT",daniel_left_click_attack,daniel_right_click_attack,daniel_left_click_attack,daniel_space_attack)
+character[0]=create_character("Daniel",spr_daniel,spr_daniel_schythe,3,6,"hes daniel WHAT THE FUCK TO YOU EXPECT",daniel_left_click_attack,daniel_right_click_attack,daniel_alt_left_click_attack,daniel_space_attack)
 
 if(file_exists("Settings.Transported"))
 {
