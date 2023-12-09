@@ -88,8 +88,8 @@ button[3]={
 }
 
 function daniel_left_click_attack(object){
-	stats.cooldown[0]=60
-	stats.immunityFrames=30
+	stats.cooldown[0]=15
+	stats.immunityFrames=14
 	var moveDirection=point_direction(object.x,object.y,mouse_x,mouse_y)
 	object.horizontalSpeed+=lengthdir_x(7,moveDirection)
 	object.verticalSpeed+=lengthdir_y(7,moveDirection)
