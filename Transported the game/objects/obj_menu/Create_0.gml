@@ -118,10 +118,17 @@ function daniel_right_click_release(object){
 	_inst.damage*=object.holdAttackPower
 	stats.cooldown[1]=15
 }
+function daniel_space_attack(object){
+	var moveDirection=point_direction(object.x,object.y,mouse_x,mouse_y)
+	object.horizontalSpeed+=lengthdir_x(15,moveDirection)
+	object.verticalSpeed+=lengthdir_y(15,moveDirection)
+	stats.cooldown[2]=30
+	stats.immunityFrames=25
+}
 
 characterSelected=0
 
-character[0]=create_character("Daniel",spr_daniel,spr_daniel_schythe,3,6,"hes daniel WHAT THE FUCK TO YOU EXPECT",daniel_left_click_attack,daniel_right_click_attack,daniel_left_click_attack,daniel_left_click_attack)
+character[0]=create_character("Daniel",spr_daniel,spr_daniel_schythe,3,6,"hes daniel WHAT THE FUCK TO YOU EXPECT",daniel_left_click_attack,daniel_right_click_attack,daniel_left_click_attack,daniel_space_attack)
 
 if(file_exists("Settings.Transported"))
 {

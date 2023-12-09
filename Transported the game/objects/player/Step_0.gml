@@ -12,9 +12,11 @@ leftKey=keyboard_check(ord("A"))
 rightKey=keyboard_check(ord("D"))
 upKey=keyboard_check(ord("W"))
 downKey=keyboard_check(ord("S"))
+spaceKey=keyboard_check(vk_space)
 leftAttackKey=mouse_check_button(mb_left)
 rightAttackKey=mouse_check_button(mb_right)
 rightAttackKeyPressed=mouse_check_button_pressed(mb_right)
+
 if(mouse_wheel_down()||mouse_wheel_up())
 {
 	usingAltAttack=!usingAltAttack
@@ -51,6 +53,10 @@ if(rightAttackKey&&stats.cooldown[1]<=0)
 if(danielFireTimer<=0&&danielFireTimerPrev>0)
 {
 	obj_menu.daniel_right_click_release(id)
+}
+if(spaceKey&&stats.cooldown[2]<=0)
+{
+	obj_menu.character[obj_menu.characterSelected].space(id)
 }
 
 image_speed=horizontalSpeed!=0||verticalSpeed!=0

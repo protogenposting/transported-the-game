@@ -11,6 +11,7 @@ swingTime=0
 maxSwingTime=0
 swingDamage=4
 hitEnemy=false
+playerIsDrawn=false
 
 ACCELLTIME=movementSpeed/12
 DEACCELLTIME=movementSpeed/5

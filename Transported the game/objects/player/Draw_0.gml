@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_sprite_ext(sprite_index,image_index,x,y,drawDirection,1,0,c_white,1)
+draw_sprite_ext(sprite_index,image_index,x,y,drawDirection,1,0,c_white,playerIsDrawn)
+playerIsDrawn=!playerIsDrawn
+if(stats.immunityFrames<=0)
+{
+	playerIsDrawn=true
+}
 if(swingTime>0)
 {
 	draw_sprite_ext(obj_menu.character[obj_menu.characterSelected].weaponSprite,image_index,x,y,drawDirection,1,90*-drawDirection+((swingTime/maxSwingTime)*90*drawDirection),c_white,1)
