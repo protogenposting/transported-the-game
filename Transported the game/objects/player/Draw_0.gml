@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(abs(horizontalSpeed)>movementSpeed||abs(verticalSpeed)>movementSpeed)
+{
+	draw_sprite_ext(sprite_index,image_index,xprevious,yprevious,drawDirection,1,0,c_white,0.3)
+}
 draw_sprite_ext(sprite_index,image_index,x,y,drawDirection,1,0,c_white,playerIsDrawn)
 if(holdAttackPower>0)
 {

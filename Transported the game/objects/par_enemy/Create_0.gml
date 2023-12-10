@@ -3,6 +3,7 @@
 healthPoints=10
 maxHealthPoints=10
 damage=1
+drawDirection=1
 function hit_player(obj){
 	stats.healthPoints-=damage
 	stats.immunityFrames=60

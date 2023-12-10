@@ -20,6 +20,18 @@ rightAttackKeyPressed=mouse_check_button_pressed(mb_right)
 if(mouse_wheel_down()||mouse_wheel_up())
 {
 	usingAltAttack=!usingAltAttack
+	if(usingAltAttack)
+	{
+		var _inst=instance_create_depth(x,y,depth,damage_indicator)
+		_inst.text="alternate attack"
+		_inst.heal=true
+	}
+	else
+	{
+		var _inst=instance_create_depth(x,y,depth,damage_indicator)
+		_inst.text="normal attack"
+		_inst.heal=true
+	}
 }
 
 var horizontalDir=rightKey-leftKey

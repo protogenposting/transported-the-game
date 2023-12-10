@@ -9,3 +9,9 @@ function hit_player(obj){
 }
 
 isChasingPlayer=false
+horizontalSpeed=0
+verticalSpeed=0
+drawDirection=1
+chaseTime=0
+
+targetPos=[x,y]

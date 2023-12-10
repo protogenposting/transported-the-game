@@ -4,3 +4,7 @@ if(healthPoints<=0)
 {
 	instance_destroy()
 }
+if(-sign(xprevious-x)!=0)
+{
+	drawDirection=-sign(xprevious-x)
+}
