@@ -44,7 +44,7 @@ for(var i=0;i<array_length(button);i++)
 			size=5
 			if(mouse_check_button(mb_left))
 			{
-				variable_global_set(button[i].variable[1],(device_mouse_x_to_gui(0)-(posx-sizex/2))/sizex)
+				variable_global_set(button[i].variable[1],((device_mouse_x_to_gui(0)-(posx-sizex/2))/sizex) *button[i].variable[3])
 			}
 			if(gamepad_button_check(0,gp_padl))
 			{

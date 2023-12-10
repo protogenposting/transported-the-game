@@ -35,6 +35,7 @@
     "IDEVersion": "2023.11.0.121",
   },
   "resources": [
+    {"id":{"name":"enemy_basic","path":"objects/enemy_basic/enemy_basic.yy",},},
     {"id":{"name":"damage_indicator","path":"objects/damage_indicator/damage_indicator.yy",},},
     {"id":{"name":"door","path":"objects/door/door.yy",},},
     {"id":{"name":"save_file","path":"scripts/save_file/save_file.yy",},},

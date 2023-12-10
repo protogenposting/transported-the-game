@@ -38,6 +38,10 @@ if(door.alarm[0]<=0)
 for(var i=0;i<array_length(cooldown);i++)
 {
 	cooldown[i]--
+	if(cooldown[i]>cooldownMax[i])
+	{
+		cooldownMax[i]=cooldown[i]
+	}
 }
 
 for(var i=0;i<array_length(acheivment);i++)

@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_sprite_ext(sprite_index,image_index,x,y,drawDirection,1,0,c_white,playerIsDrawn)
+if(holdAttackPower>0)
+{
+	draw_rectangle(x-64*drawDirection,bbox_bottom-holdAttackPower*32,x-96*drawDirection,bbox_bottom,false)
+}
 playerIsDrawn=!playerIsDrawn
 if(stats.immunityFrames<=0)
 {

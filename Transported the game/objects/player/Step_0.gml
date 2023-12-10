@@ -41,6 +41,14 @@ else
 {
 	verticalSpeed=moveToward(verticalSpeed,0,DEACCELLTIME)
 }
+/*if(abs(horizontalSpeed)>movementSpeed)
+{
+	horizontalSpeed=moveToward(horizontalSpeed,movementSpeed*horizontalDir,CAPDEACCELLTIME)
+}
+if(abs(verticalSpeed)>movementSpeed)
+{
+	verticalSpeed=moveToward(verticalSpeed,movementSpeed*verticalDir,CAPDEACCELLTIME)
+}*/
 
 if(usingAltAttack)
 {
@@ -68,6 +76,10 @@ if(spaceKey&&stats.cooldown[2]<=0)
 {
 	obj_menu.character[obj_menu.characterSelected].space(id)
 }
+
+visibility=100
+sound=100
+
 
 image_speed=horizontalSpeed!=0||verticalSpeed!=0
 image_index*=horizontalSpeed!=0||verticalSpeed!=0

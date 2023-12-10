@@ -12,9 +12,14 @@ maxSwingTime=0
 swingDamage=4
 hitEnemy=false
 playerIsDrawn=false
+speedCap=movementSpeed*5
+
+visibility=0
+sound=0
 
 ACCELLTIME=movementSpeed/12
 DEACCELLTIME=movementSpeed/5
+CAPDEACCELLTIME=movementSpeed/2
 
 function moveToward(from,to,by){
 	

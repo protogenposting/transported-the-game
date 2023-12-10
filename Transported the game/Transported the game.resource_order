@@ -17,6 +17,7 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"enemy_basic","order":9,"path":"objects/enemy_basic/enemy_basic.yy",},
     {"name":"damage_indicator","order":8,"path":"objects/damage_indicator/damage_indicator.yy",},
     {"name":"door","order":3,"path":"objects/door/door.yy",},
     {"name":"save_file","order":2,"path":"scripts/save_file/save_file.yy",},

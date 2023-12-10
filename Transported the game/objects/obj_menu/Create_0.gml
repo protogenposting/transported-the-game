@@ -97,17 +97,24 @@ function daniel_left_click_attack(object){
 	object.maxSwingTime=5
 	object.swingDamage=1
 	object.hitEnemy=false
+	while(abs(object.horizontalSpeed)>object.speedCap)
+	{
+		object.horizontalSpeed-=sign(object.horizontalSpeed)
+	}
+	while(abs(object.verticalSpeed)>object.speedCap)
+	{
+		object.verticalSpeed-=sign(object.verticalSpeed)
+	}
 	
 }
 function daniel_alt_left_click_attack(object){
-	stats.cooldown[3]=15
-	stats.immunityFrames=14
+	stats.cooldown[3]=30
 	var moveDirection=point_direction(object.x,object.y,mouse_x,mouse_y)
-	object.horizontalSpeed+=lengthdir_x(7,moveDirection)
-	object.verticalSpeed+=lengthdir_y(7,moveDirection)
-	object.swingTime=5
-	object.maxSwingTime=5
-	object.swingDamage=1
+	object.horizontalSpeed+=lengthdir_x(-7,moveDirection)
+	object.verticalSpeed+=lengthdir_y(-7,moveDirection)
+	object.swingTime=7
+	object.maxSwingTime=7
+	object.swingDamage=2
 	object.hitEnemy=false
 	
 }
@@ -136,6 +143,14 @@ function daniel_space_attack(object){
 	object.verticalSpeed+=lengthdir_y(15,moveDirection)
 	stats.cooldown[2]=30
 	stats.immunityFrames=25
+	while(abs(object.horizontalSpeed)>object.speedCap)
+	{
+		object.horizontalSpeed-=sign(object.horizontalSpeed)
+	}
+	while(abs(object.verticalSpeed)>object.speedCap)
+	{
+		object.verticalSpeed-=sign(object.verticalSpeed)
+	}
 }
 
 characterSelected=0

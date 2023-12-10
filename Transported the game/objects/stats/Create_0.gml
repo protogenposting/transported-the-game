@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 cooldown=[0,0,0,0]
+cooldownMax=[0,0,0,0]
 
 healthPoints=3
 maxHealthPoints=3
