@@ -53,13 +53,12 @@ button[0]={
 	size:[256,128],
 	name:"Start",
 	func:function(){
-		room_goto(Room1)
+		room_goto(rm_menu_character_select)
 		/*with(instance_create_depth(0,0,0,stats))
 		{
 			acheivment=obj_menu.acheivment
 			load_game_progress("save_file1.ReZ")
 		}*/
-		audio_stop_all()
 	}
 }
 button[1]={
@@ -155,7 +154,11 @@ function daniel_space_attack(object){
 
 characterSelected=0
 
-character[0]=create_character("Daniel",spr_daniel,spr_daniel_schythe,3,6,"hes daniel WHAT THE FUCK TO YOU EXPECT",daniel_left_click_attack,daniel_right_click_attack,daniel_alt_left_click_attack,daniel_space_attack)
+character[0]=create_character("Daniel",spr_daniel,spr_daniel_schythe,3,6,"hes daniel WHAT THE FUCK TO YOU EXPECT",
+daniel_left_click_attack,daniel_right_click_attack,daniel_alt_left_click_attack,daniel_space_attack)
+
+character[1]=create_character("Willow",spr_willow,spr_daniel_schythe,3,6,"Willowo whats this owo?!?!?!",
+daniel_left_click_attack,daniel_right_click_attack,daniel_alt_left_click_attack,daniel_space_attack)
 
 if(file_exists("Settings.Transported"))
 {
